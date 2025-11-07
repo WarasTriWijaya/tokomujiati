@@ -3,58 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toko Kripik Ibu</title>
+  <title>Toko Keripik Mujiati</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Open Graph Metadata untuk preview di WhatsApp / Facebook -->
-  <meta property="og:title" content="Toko Kripik Ibu" />
-  <meta property="og:description" content="Renyah, Gurih, dan Buatan Rumahan ❤️ Kripik Singkong, Pisang, dan Balado — oleh-oleh khas rumahan yang lezat!" />
+  <!-- Metadata untuk Preview -->
+  <meta property="og:title" content="Toko Keripik Mujiati" />
+  <meta property="og:description" content="Keripik renyah dan gurih buatan rumahan ❤️ Kripik Tempe, Kering Kentang, dan Balado lezat!" />
   <meta property="og:image" content="https://warastriwijaya.github.io/tokomujjati/images/kripiktempe.jpg" />
   <meta property="og:url" content="https://warastriwijaya.github.io/tokomujjati/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="id_ID" />
-
-  <!-- Untuk preview di Twitter juga (optional tapi bagus ditambahkan) -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Toko Kripik Ibu">
-  <meta name="twitter:description" content="Renyah, Gurih, dan Buatan Rumahan ❤️ Kripik Singkong, Pisang, dan Balado — oleh-oleh khas rumahan yang lezat!">
-  <meta name="twitter:image" content="https://warastriwijaya.github.io/tokomujjati/images/kripiktempe.jpg">
 </head>
 
 <body>
   <header>
-    <h1>Toko Kripik Ibu</h1>
+    <h1>Toko Keripik Mujiati</h1>
     <p>Renyah, Gurih, dan Buatan Rumahan ❤️</p>
+    <div class="cart-icon" id="cartBtn">🛒 <span id="cartCount">0</span></div>
   </header>
 
   <section class="produk-container">
     <div class="produk">
       <img src="images/kripiktempe.jpg" alt="Kripik Tempe">
       <h3>Kripik Tempe</h3>
-      <p>Rp10.000 / bungkus</p>
-      <a href="https://wa.me/6285171600209?text=NAMA:%0AALAMAT:%0APRODUK: Kripik Tempe%0ATOTAL: Rp10.000"
-         target="_blank" class="btn">Beli Sekarang</a>
+      <p>Rp10.000</p>
+      <button class="btn" onclick="addToCart('Kripik Tempe', 10000)">Tambah ke Keranjang</button>
     </div>
 
     <div class="produk">
-      <img src="images/kripik-pisang.jpg" alt="Kripik Pisang">
-      <h3>Kripik Pisang</h3>
-      <p>Rp12.000 / bungkus</p>
-      <a href="https://wa.me/6285171600209?text=NAMA:%0AALAMAT:%0APRODUK: Kripik Pisang%0ATOTAL: Rp12.000"
-         target="_blank" class="btn">Beli Sekarang</a>
+      <img src="images/keringkentang.png" alt="Kering Kentang">
+      <h3>Kering Kentang</h3>
+      <p>Rp12.000</p>
+      <button class="btn" onclick="addToCart('Kering Kentang', 12000)">Tambah ke Keranjang</button>
     </div>
 
     <div class="produk">
       <img src="images/kripik-balado.jpg" alt="Kripik Balado">
       <h3>Kripik Balado</h3>
-      <p>Rp15.000 / bungkus</p>
-      <a href="https://wa.me/6285171600209?text=NAMA:%0AALAMAT:%0APRODUK: Kripik Balado%0ATOTAL: Rp15.000"
-         target="_blank" class="btn">Beli Sekarang</a>
+      <p>Rp15.000</p>
+      <button class="btn" onclick="addToCart('Kripik Balado', 15000)">Tambah ke Keranjang</button>
     </div>
   </section>
 
+  <!-- Keranjang Slide -->
+  <div id="cartPanel" class="cart-panel">
+    <h2>🛒 Keranjang Belanja</h2>
+    <div id="cartItems"></div>
+    <h3>Total: Rp<span id="cartTotal">0</span></h3>
+    <button class="checkout-btn" onclick="checkout()">Checkout via WhatsApp</button>
+    <button class="close-btn" onclick="toggleCart()">Tutup</button>
+  </div>
+
   <footer>
-    <p>&copy; 2025 Toko Kripik Ibu | Dibuat dengan ❤️ oleh Anak Ibu</p>
+    <p>&copy; 2025 Toko Keripik Mujiati | Dibuat dengan ❤️ oleh Anak Ibu</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
