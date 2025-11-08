@@ -43,6 +43,8 @@ header {
 
 .produk img {
   width: 100%;
+  height: 200px;         /* tinggi tetap agar semua gambar sama */
+  object-fit: cover;      /* jaga proporsi gambar tetap rapi */
   border-radius: 10px;
 }
 
